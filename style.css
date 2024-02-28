@@ -1,3 +1,22 @@
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-image: url(https://wallpapercrafter.com/desktop5/1324487-Seasons-Autumn-Nature-Fall-Bosque-1080P.jpg);
+    background-color: rgba(250, 250, 250, 0.5); 
+    background-repeat: no-repeat;
+}
+
+.page-main{
+    background-image: linear-gradient(to top left, transparent -700%, #fafafa 99%);
+
+}
+
 .principal {
     display: grid;
     grid-template-columns:  repeat(3, auto);
@@ -7,8 +26,34 @@
                           'lateral      centro2         bio';
 
     gap: 20px;
-    margin-top: 30px;
+    margin-top: 18px;
 }
+
+/* Imagem de portada */
+
+.content-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 30px;
+}
+
+.button-header{
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.button-back{
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
 
 /* Imagem de portada */
 
@@ -34,7 +79,6 @@
 /* Informação lateral */
 
 
-
 .contenedor-lateral {
     grid-area: lateral;
     height: auto;
@@ -45,11 +89,18 @@
 .lateral-superior {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     height: 800px;
     width: auto;
-    /* background-color: aquamarine; */
-    margin-left: 20px;
+    margin-left: 35px;
+}
+
+.info-perfil{
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.info-perfil h3 {
+    font-size: 15px;
 }
 
 .profile-left {
@@ -60,20 +111,43 @@
     margin-top: 100px;
 }
 
+
 .button-follow {
+    background-image: linear-gradient(to top right, #f53377, #f4792f 90%);
     border-radius: 20px;
     border: none;
-    height: 30px;
-    width: 100px;
+    height: 25px;
+    width: 85px;
     margin-bottom: 30px;
+    transition: transform 0.2s ease;
 }
+
+.button-follow:active{
+    transform: translateY(2px);
+}
+
 
 .lateral-superior img {
     height: 200px;
     width: 200px;
+    /* margin-left: 5%; */
     object-fit: cover;
     border-radius: 50%;
     margin-top: 20px;
+}
+
+
+.quantidade {
+    font-size: 25px;
+}
+
+.descricao {
+    font-size: 12px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
 }
 
 .info-numeros {
@@ -83,7 +157,6 @@
     width: 220px;
     height: 70px;
     margin-top: 40px;
-    /* background-color: bisque; */
 }
 
 .lateral-superior h3 {
@@ -95,16 +168,47 @@
     margin-bottom: 5px;
 }
 
+
+
+
 /* Centro 1 */
 
-.post-container {
+
+
+
+.centro1{
+    background-color: white;
     grid-area: centro1;
     overflow-x: auto;
     display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    border-radius: 5%;
+    height: 200px;
+    width: 700px;
+}
+
+
+
+.post-container {
+    overflow-x: auto;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    border: 3px solid black;
+    height: 250px;
 }
+
+
+.centro1 h3{
+    display: flex;
+    font-size: 18px;
+    margin-right: 100px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
 
 
 .post-container img {
@@ -116,6 +220,8 @@
 
 
 /* Centro 2 rede */
+
+
 
 
 .rede img {
@@ -130,7 +236,7 @@
 .rede{
     grid-area: centro2;
     display: flex;
-    background-color: rgb(214, 212, 210);
+    background-color: #ffffff;
     border-radius: 20px;
     height: 250px;
     width: auto;
@@ -158,12 +264,11 @@
 }
 
 .users-numbers{
-    display: flex;
-    align-items: center;
     justify-content: center;
     border-radius: 20px;
+    background-color: #fafafa;
     border: none;
-    height: 30px;
+    height: 430px;
     width: 100px;
     margin-bottom: 50px;
     margin-left: 60px;
@@ -173,7 +278,6 @@
 /* Lateral direito */
 
 .profile-right {
-    background-color: aquamarine;
     grid-area: bio;
 }
 
