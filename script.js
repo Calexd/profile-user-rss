@@ -8,7 +8,7 @@ let textButton = document.getElementById('follow-user').innerText;
 
 console.log(textButton);
 
-numeroSeguidores = parseFloat(seguidores.innerText.replace('.', ''));
+numeroSeguidores = parseInt(seguidores.innerText.replace('.', ''));
 
 buttonFollow.addEventListener('click', () => {
     if (numeroSeguidores == 1206) {
@@ -19,7 +19,7 @@ buttonFollow.addEventListener('click', () => {
     } else {
         numeroSeguidores -=1;
         seguindoText = "Seguir";
-        buttonFollow.textContent = seguindoText;
         seguidores.textContent = numeroSeguidores.toLocaleString();
+        buttonFollow.textContent = seguindoText;
     }
 });
